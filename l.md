@@ -1,3 +1,7 @@
+
+# 雷达侦测目标
+
+```c++
 #include<iostream>
 #include<vector>
 #include<cmath>
@@ -5,17 +9,19 @@ using namespace std;
 
 int main()
 {
-	int n,r,cnt;
-	cin>>n>>r;
-	cnt=0;
-	vector<vector<int>> v(n,vector<int>(2));
-	for(int i=0;i<n;i++){
-		cin>>v[i][0]>>v[i][1];
-		p=pow(v[i][0],2)+pow(v[i][1],2);
-		if(p<=pow(r,2)){
-			cnt++;
-		}
-	}
-	cout<<cnt;
+    int n,r,cnt;
+    cin>>n>>r;
+    cnt=0;
+    vector<vector<int>> v(n,vector<int>(2));
+    for(int i=0;i<n;i++){
+        cin>>v[i][0]>>v[i][1];
+        p=pow(v[i][0],2)+pow(v[i][1],2);
+        if(p<=pow(r,2)){
+            cnt++;
+        }
+    }
+    cout<<cnt;
 
 }
+
+```
