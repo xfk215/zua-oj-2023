@@ -1,3 +1,7 @@
+
+# 猜数字游戏的提示
+
+```c++
 #include<stdio.h>
 #define maxn 1010
 int main(void)
@@ -36,4 +40,6 @@ int main(void)
             printf("(%d,%d)\n",A,B-A); 
         }
     }
-} 
+}
+
+```
