@@ -1,3 +1,7 @@
+
+# 周期串
+
+```c++
 #include<iostream>
 #include<algorithm>
 #include<cstring>
@@ -28,3 +32,5 @@ int main()
         }
     }
 }
+
+```
