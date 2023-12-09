@@ -1,0 +1,17 @@
+
+# 圆柱体的表面积
+
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+    double r,h;
+    double pi=3.1415926;
+    cin>>r>>h;
+    double res=2.0*pi*r*(r+h);
+    printf("Area = %.3lf",res);
+}
+
+
+```
