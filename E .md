@@ -1,3 +1,7 @@
+
+# 韩信点兵
+
+```c++
 #include<iostream>
 #include<cmath>
 using namespace std;
@@ -22,3 +26,5 @@ int main()
          if(!flag)printf("Case %d: No answer\n",cnt);
      }
 }
+
+```
