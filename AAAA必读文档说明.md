@@ -27,3 +27,10 @@ vector<int> v(n);
 QQ/邮箱:[2478421306@qq.com]  
 可在此github主页了解我们332宿舍  
 ₍ᐢ •͈ ༝ •͈ ᐢ₎♡  
+
+## 额
+
+推荐:  
+c++程序设计  魏英   西北工业大学  
+[c++相关文档](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5
+
