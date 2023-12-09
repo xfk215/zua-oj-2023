@@ -1,3 +1,7 @@
+
+# 开灯问题
+
+```c++
 #include<iostream>
 #include<cmath>
 int cnt;
@@ -17,3 +21,5 @@ int main()
          cout<<i<<" ";
      }
 }
+
+```
