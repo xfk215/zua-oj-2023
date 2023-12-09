@@ -19,7 +19,7 @@ vector<int> lx(int n,int m,vector<int> v){
         }
     }
     if(!dp[n][m]){
-        cout<<"NO Solution"<<endl;
+        cout<<"No Solution"<<endl;
         return {};
     }
     vector<int> k;
@@ -52,5 +52,6 @@ int main()
     //8 9   5 9 8 7 2 3 4 1
     return 0;
 }
+
 
 ```
