@@ -25,7 +25,7 @@ vector<int> v(n);
 会更新，修改，增加......  
 欢迎探讨，建议！  
 QQ/邮箱:[2478421306@qq.com]  
-可在此github主页了解我们332宿舍  
+可在my profile了解我们332宿舍  
 ![Alt text](assets/Bottom_up.svg)  
 
 ₍ᐢ •͈ ༝ •͈ ᐢ₎♡  
