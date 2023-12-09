@@ -26,6 +26,8 @@ vector<int> v(n);
 欢迎探讨，建议！  
 QQ/邮箱:[2478421306@qq.com]  
 可在此github主页了解我们332宿舍  
+![Alt text](assets/Bottom_up.svg)  
+
 ₍ᐢ •͈ ༝ •͈ ᐢ₎♡  
 
 ## 额
@@ -34,7 +36,9 @@ QQ/邮箱:[2478421306@qq.com]
 c++程序设计  魏英   西北工业大学  章节很多。  
 [c++参考手册](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5  
 leetcode  
-github 开源学习资料
+github 开源学习资料  
+![Alt text](assets/Bottom_down.svg)
+
 
 
 
