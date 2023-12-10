@@ -17,7 +17,8 @@ cin>>n;
 vector<int> v(n);
 ```
 
-实现
+实现  
+部分代码会出python,go编写的.
 
 ## 说明
 
