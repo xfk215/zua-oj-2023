@@ -25,16 +25,16 @@ vector<int> v(n);
 会更新，修改，增加......  
 欢迎探讨，建议！  
 QQ/邮箱:[2478421306@qq.com]  
-可在my profile了解我们332宿舍  
+可在my profile了解我们332宿舍，我们宿舍的静态网页:[332六条犬](https://xfk215.github.io/332sushe/)    
 ![Alt text](assets/Bottom_up.svg)  
 
-₍ᐢ •͈ ༝ •͈ ᐢ₎♡  
+
 
 ## 额
 
 推荐:  
 c++程序设计  魏英   西北工业大学  章节很多。  
-[c++参考手册](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5  
+[c++参考手册](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)   
 leetcode  
 github 开源学习资料  
 ![Alt text](assets/Bottom_down.svg)
