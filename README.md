@@ -25,7 +25,7 @@ vector<int> v(n);
 会更新，修改，增添......  
 
   
-欢迎探讨，建议！  期待您的![Alt text](assets/4.png)      0.0   
+欢迎探讨，建议！  期待您的      ![Alt text](assets/4.png)          
 QQ/邮箱:[2478421306@qq.com]  
 
 ## 另外
