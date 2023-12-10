@@ -25,10 +25,11 @@ vector<int> v(n);
 会更新，修改，增加......  
 欢迎探讨，建议！  
 QQ/邮箱:[2478421306@qq.com]  
-可在my profile了解我们332宿舍，我们宿舍的静态网页:[332六条犬](https://xfk215.github.io/332sushe/)  
+我们宿舍的静态网页:[332六条犬](https://xfk215.github.io/332sushe/)  
 基于bootstrap框架,mysql+php实现留言板(无服务器,打不开,只是个Static pages)  
-主页332sushe库，了解更多。
+主页332sushe库，了解更多。  
 欢迎!  
+  
 ![Alt text](assets/Bottom_up.svg)  
 
 
