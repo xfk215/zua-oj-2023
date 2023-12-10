@@ -30,8 +30,8 @@ QQ/邮箱:[2478421306@qq.com]
 
 ## 另外
 
-我们宿舍的静态网页:[332六条犬](https://xfk215.github.io/332sushe/)  
-基于bootstrap框架,mysql+php实现留言板(无服务器,打不开,只是个Static pages)  
+我们宿舍的静态网页:[332六条犬](https://xfk215.github.io/332sushe/)  点击查看  
+基于bootstrap框架,mysql+php实现留言板打不开(无服务器,只是个Static pages)  
 主页332sushe库，了解更多。  
 欢迎!  
   
