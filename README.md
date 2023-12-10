@@ -42,7 +42,7 @@ QQ/邮箱:[2478421306@qq.com]
 ## 额
 
 推荐:  
-c++程序设计  魏英   西北工业大学  章节很多。  
+c++程序设计  魏英   西北工业大学  mooc 章节很多。  
 [c++参考手册](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)   
 leetcode  
 github 开源学习资料  
