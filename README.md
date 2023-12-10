@@ -1,6 +1,9 @@
 
 # 郑航2023年秋季《程序设计综合实践》oj练习
 
+![:zua-oj-2023](https://count.getloli.com/get/@:zua-oj-2023?theme=gelbooru)
+
+
 ## 近期更新内容
 
 2023/12/9将大部分  
