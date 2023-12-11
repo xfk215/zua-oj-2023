@@ -5,22 +5,9 @@
 
 
 ## 近期更新内容
+无  
 
-2023/12/9将大部分  
 
-```c++
-const int N=10010;
-int a[N];
-```
-
-用
-
-```c++
-cin>>n;
-vector<int> v(n);
-```
-
-实现  
  
 ![Static Badge](https://img.shields.io/badge/%E6%8E%A8%E8%8D%90%E5%B7%A5%E5%85%B7-%E5%B0%8F%E7%86%8A%E7%8C%ABc%2B%2B-brightgreen)  
 告别Dev c++
@@ -32,8 +19,9 @@ vector<int> v(n);
 ![Alt text](assets/4.png)          
  
 ## 另外
-
-[静态网页](https://xfk215.github.io/332sushe/):  点击查看   
+仅供参考  主要便于我们宿舍学习。  
+ 
+[宿舍网站](https://xfk215.github.io/332sushe/):  点击查看   
   
 ![Alt text](assets/Bottom_up.svg)  
  
