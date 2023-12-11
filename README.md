@@ -21,9 +21,7 @@ vector<int> v(n);
 ```
 
 实现  
-部分代码会出python,go编写的.  
-
-  
+ 
 ![Static Badge](https://img.shields.io/badge/%E6%8E%A8%E8%8D%90%E5%B7%A5%E5%85%B7-%E5%B0%8F%E7%86%8A%E7%8C%ABc%2B%2B-brightgreen)  
 告别Dev c++
 <h3 align="left">Languages and Tools:</h3>
@@ -37,26 +35,13 @@ vector<int> v(n);
 欢迎探讨，建议!  
 期待  
 ![Alt text](assets/4.png)          
-QQ/邮箱:[2478421306@qq.com]  
-
+ 
 ## 另外
 
-我们宿舍的静态网页:[332六条犬](https://xfk215.github.io/332sushe/)  点击查看  
-基于bootstrap框架,mysql+php实现留言板打不开(无服务器,只是个Static pages)  
-主页332sushe库，了解更多。  
-欢迎!  
+我们宿舍的静态网页:[332六条犬](https://xfk215.github.io/332sushe/)  点击查看   
   
 ![Alt text](assets/Bottom_up.svg)  
-
-
-
-## 额
-
-推荐:  
-c++程序设计  魏英   西北工业大学  mooc 章节很多。  
-[c++参考手册](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)   
-leetcode  
-github 开源学习资料  
+ 
 ![Alt text](assets/Bottom_down.svg)
 
 
