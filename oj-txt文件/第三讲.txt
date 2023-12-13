@@ -1,0 +1,180 @@
+//  求n的阶乘
+#include<iostream>
+#include<algorithm>
+#include<cstring>
+using namespace std;
+int fact(int n)
+{
+    int sum=1;
+    for(int i=1;i<=n;i++)
+    sum*=i;
+     
+    return sum;
+}
+int main()
+{
+   int n;
+   cin>>n;
+   while(n--)
+   {
+        int num;
+        cin>>num;
+        cout<<fact(num)<<endl;
+   }
+}
+
+
+//  用分治法寻找最大值
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+int main()
+{
+    int n = 0, m = 0;
+    cin >> n;
+    while (n--)
+    {
+        cin >> m;
+        vector<int> a(m);
+        for (int i = 0; i < m; i++) cin >> a[i];
+        cout << *max_element(a.begin(), a.end()) << endl;
+    }
+}
+
+//  求斐波那契数列第n项的值
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int num;
+        cin >> num;
+        if (num <= 0) {
+            cout << 0 << endl;
+        }
+        else if (num == 1 || num == 2) {
+            cout << 1 << endl;
+        }
+        else {
+            int f1 = 1;
+            int f2 = 1;
+            int f = 0;
+            for (int i = 3; i <= num; i++) {
+                f = f1 + f2;
+                f1 = f2;
+                f2 = f;
+            }
+            cout << f << endl;
+        }
+    }
+    return 0;
+}
+
+//最大公约数
+#include<iostream>              
+using namespace std;
+
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    else {
+        return gcd(b, a % b);
+    }
+}
+
+int main() {
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int a, b;
+        cin >> a >> b;
+        cout << gcd(a, b) << endl;
+    }   
+    return 0;
+}
+
+
+//最小公倍数
+#include <iostream>           
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int a, b;
+        cin >> a >> b;
+        int maxVal = max(a, b);
+        int lcm = maxVal;
+        while (true) {
+            if (lcm % a == 0 && lcm % b == 0) {
+                break;
+            }
+            lcm += maxVal;
+        }
+        cout << lcm << endl;
+    }
+    return 0;
+}
+
+
+// 用分治法寻找最小值
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+int main()
+{
+    int n = 0, m = 0;
+    cin >> n;
+    while (n--)
+    {
+        cin >> m;
+        vector<int> a(m);
+        for (int i = 0; i < m; i++) cin >> a[i];
+        cout << *min_element(a.begin(), a.end()) << endl;
+    }
+}
+
+
+//  用分治法寻找最大和最小值
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+int main()
+{
+    int n = 0, m = 0;
+    cin >> n;
+    while (n--)
+    {
+        cin >> m;
+        vector<int> a(m);
+        for (int i = 0; i < m; i++) cin >> a[i];
+        cout << *max_element(a.begin(), a.end())<<" "<< *min_element(a.begin(), a.end()) << endl;
+    }
+}
+
+
+//  用分治法寻找第k小的值
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+int main() {
+    int n, m, k;
+    cin >> n >> m >> k;
+    while (n--) {
+        vector<int> v(m);
+        for (int i = 0; i < m; i++) {
+            cin >> v[i];
+        }
+        sort(v.begin(), v.end());
+        cout << v[k-1] << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,19 @@
+#include<iostream>
+#include<cmath>
+int cnt;
+using namespace std;
+int main()
+{
+     int n,k;
+     cin>>n>>k;
+     for(int i=1;i<=n;i++)
+     {
+         cnt=0;
+         for(int j=1;j<=k;j++)
+         {
+             if(i%j==0)cnt++;
+         }
+         if(cnt%2)
+         cout<<i<<" ";
+     }
+}

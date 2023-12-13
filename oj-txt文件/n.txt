@@ -1,0 +1,51 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+vector<int> lx(int n,int m,vector<int> v){
+    vector<vector<bool>> dp(n+1,vector<bool>(m+1,false));
+    dp[0][0]=true;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=m;j++){
+            dp[i][j]=dp[i-1][j];
+            if(j>=v[i-1]){
+                dp[i][j]=dp[i][j]||dp[i-1][j-v[i-1]];
+            }
+        }
+    }
+    if(!dp[n][m]){
+        cout<<"No Solution"<<endl;
+        return {};
+    }
+    vector<int> k;
+    int i=n,j=m;
+    while(i>0&&j>0){
+        if(j>=v[i-1]&&dp[i][j]==dp[i-1][j-v[i-1]]){
+            k.push_back(v[i-1]);
+            j-=v[i-1];
+        }
+        i--;
+    }
+    return k;
+}
+
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    vector<int> v(n);
+    for(int i=0;i<n;i++){
+        cin>>v[i];
+    }
+    vector<int> res=lx(n,m,v);
+    if(!res.empty()){
+        for(unsigned int i=0;i<res.size();i++){
+            cout<<res[i]<<" ";
+        }
+        cout<<endl;
+    }
+    //8 9   5 9 8 7 2 3 4 1
+    return 0;
+}
+
