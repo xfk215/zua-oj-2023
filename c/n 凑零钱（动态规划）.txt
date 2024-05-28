@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+void printVector(int *v, int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", v[i]);
+    }
+    printf("\n");
+}
+
+int* lx(int n, int m, int *v, int *resultSize) {
+    bool **dp = (bool **)malloc((n + 1) * sizeof(bool *));
+    for (int i = 0; i < n + 1; i++) {
+        dp[i] = (bool *)malloc((m + 1) * sizeof(bool));
+    }
+
+    dp[0][0] = true;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= m; j++) {
+            dp[i][j] = dp[i - 1][j];
+            if (j >= v[i - 1]) {
+                dp[i][j] = dp[i][j] || dp[i - 1][j - v[i - 1]];
+            }
+        }
+    }
+
+    if (!dp[n][m]) {
+        printf("No Solution\n");
+        *resultSize = 0;
+        return NULL;
+    }
+
+    int *k = (int *)malloc(n * sizeof(int));
+    int i = n, j = m;
+    int idx = 0;
+    while (i > 0 && j > 0) {
+        if (j >= v[i - 1] && dp[i][j] == dp[i - 1][j - v[i - 1]]) {
+            k[idx++] = v[i - 1];
+            j -= v[i - 1];
+        }
+        i--;
+    }
+
+    *resultSize = idx;
+    return k;
+}
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+    int *v = (int *)malloc(n * sizeof(int));
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &v[i]);
+    }
+
+    int resultSize;
+    int *res = lx(n, m, v, &resultSize);
+    if (resultSize > 0) {
+        printVector(res, resultSize);
+    }
+
+    free(res);
+    free(v);
+
+    return 0;
+}

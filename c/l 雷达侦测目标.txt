@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int n, r, cnt = 0;
+    scanf("%d %d", &n, &r);
+    int **v = (int **)malloc(n * sizeof(int *));
+    for (int i = 0; i < n; i++)
+    {
+        v[i] = (int *)malloc(2 * sizeof(int));
+        scanf("%d %d", &v[i][0], &v[i][1]);
+        int p = pow(v[i][0], 2) + pow(v[i][1], 2);
+        if (p <= pow(r, 2))
+        {
+            cnt++;
+        }
+    }
+    printf("%d\n", cnt);
+    for (int i = 0; i < n; i++)
+    {
+        free(v[i]);
+    }
+    free(v);
+    return 0;
+}

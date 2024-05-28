@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int money, chicken;
+    int t;
+    int flag = 0;
+
+    while(scanf("%d %d", &money, &chicken) != EOF){
+        flag = 0;
+        
+        for(int i=0; i <= money/5; i++){
+            for(int j=0; j <= money/3; j++){
+                t = chicken - i - j;
+                if((5*i + 3*j + t/3) == money && (i+j+t) == chicken && t%3 == 0){
+                    printf("%d %d %d\n", i, j, t);
+                    flag = 1;
+                }
+            }
+        }
+
+        if(flag == 0){
+            printf("no answer\n");
+        }
+    }
+    
+    return 0;
+}

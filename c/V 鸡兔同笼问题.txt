@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main()
+{
+    int n, m;
+    while(scanf("%d %d", &n, &m) != EOF)
+    {
+        bool flag = false;
+        for(int i = 1; i <= n; i++)
+        {
+            for(int j = 1; j <= n; j++)
+            {
+                if(i + j == n && i * 2 + j * 4 == m)
+                {
+                    flag = true;
+                    printf("%d %d\n", i, j);
+                }
+            }
+        }
+        if (!flag)
+        {
+            printf("No answer\n");
+        }
+    }
+    
+    return 0;
+}

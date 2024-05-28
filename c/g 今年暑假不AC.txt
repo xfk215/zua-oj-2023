@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int cmpfunc(const void *a, const void *b)
+{
+    const int *p1 = *(const int **)a;
+    const int *p2 = *(const int **)b;
+    return (p1[1] - p2[1]);
+}
+
+int main()
+{
+    while (1)
+    {
+        int n;
+        scanf("%d", &n);
+        if (n == 0)
+        {
+            break;
+        }
+
+        int **gala = (int **)malloc(n * sizeof(int *));
+        for (int i = 0; i < n; i++)
+        {
+            gala[i] = (int *)malloc(2 * sizeof(int));
+            scanf("%d %d", &gala[i][0], &gala[i][1]);
+        }
+
+        qsort(gala, n, sizeof(int *), cmpfunc);
+
+        int count = 0;
+        int et = 0;
+        for (int i = 0; i < n; i++)
+        {
+            int st = gala[i][0];
+            if (st >= et)
+            {
+                count++;
+                et = gala[i][1];
+            }
+        }
+
+        printf("%d\n", count);
+
+        for (int i = 0; i < n; i++)
+        {
+            free(gala[i]);
+        }
+        free(gala);
+    }
+    return 0;
+}

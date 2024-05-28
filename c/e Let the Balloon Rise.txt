@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int n;
+    while (1)
+    {
+        scanf("%d", &n);
+        if (n == 0)
+        {
+            break;
+        }
+
+        char color[16];
+        int count[26] = {0};
+        int maxCount = 0;
+        char popularColor[16];
+
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%s", color);
+            count[color[0] - 'a']++;
+            if (count[color[0] - 'a'] > maxCount)
+            {
+                maxCount = count[color[0] - 'a'];
+                strcpy(popularColor, color);
+            }
+        }
+
+        printf("%s\n", popularColor);
+    }
+
+    return 0;
+}

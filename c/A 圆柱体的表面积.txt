@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    double r, h;
+    double pi = 3.1415926;
+    
+    scanf("%lf %lf", &r, &h);
+    
+    double res = 2.0 * pi * r * (r + h);
+    
+    printf("Area = %.3lf", res);
+    
+    return 0;
+}

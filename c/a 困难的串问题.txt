@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+
+#define N 55
+
+int a[N];
+int n, l, cnt;
+
+int check(int u, int j)
+{
+    for (int i = 0; i < j; i++)
+    {
+        if (a[u - i] != a[u - i - j])
+            return 1;
+    }
+    return 0;
+}
+
+int dfs(int u)
+{
+    if (cnt++ == n)
+    {
+        for (int i = 0; i < n; i++)
+            printf("%c", a[i] + 'A');
+        printf("\n");
+        return 0;
+    }
+    for (int i = 0; i < l; i++)
+    {
+        int flag = 1;
+        a[u] = i;
+        for (int j = 1; j * 2 <= u + 1; j++)
+        {
+            if (!check(u, j))
+            {
+                flag = 0;
+                break;
+            }
+        }
+        if (flag && !dfs(u + 1))
+            return 0;
+    }
+    return 1;
+}
+
+int main()
+{
+    while (scanf("%d %d", &n, &l) == 2)
+    {
+        cnt = 0;
+        memset(a, 0, sizeof(a));
+        dfs(0);
+    }
+    return 0;
+}

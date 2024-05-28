@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int cmpfunc(const void *a, const void *b) {
+    return (*(int*)a - *(int*)b);
+}
+
+int main() {
+    int n, m, k;
+    scanf("%d %d %d", &n, &m, &k);
+    
+    while (n--) {
+        int *v = (int*) malloc(m * sizeof(int));
+        
+        for (int i = 0; i < m; i++) {
+            scanf("%d", &v[i]);
+        }
+
+        qsort(v, m, sizeof(int), cmpfunc);
+        printf("%d\n", v[k-1]);
+        
+        free(v);
+    }
+    
+    return 0;
+}

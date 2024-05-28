@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char s[100];
+    scanf("%s",s);
+    int cnt=0;
+    for(int abc=100;abc<=999;abc++)
+        for(int de=10;de<=99;de++){
+         int flag=0;
+         int res=abc*de;
+         int num1=abc*(de%10);
+         int num2=abc*(de/10);
+         char buff[100];
+         sprintf(buff,"%d%d%d%d%d",abc,de,num1,num2,res);
+         int len = strlen(buff);
+         for(int i=0;i<len;i++)
+         {
+             if(strchr(s,buff[i])==NULL)
+             {
+                flag=1;
+                break;
+             }
+         }
+         if(flag==0)
+         {
+              cnt++;
+                 printf("<%d>\n",cnt);
+                 printf("%5d\n",abc);
+                 printf("X%4d\n",de);
+                 printf("-----\n");
+                 printf("%5d\n",num1);
+                 printf("%4d\n",num2);
+                 printf("-----\n");
+                 printf("%5d\n",res);
+                printf("\n");
+         }   
+     }
+ 
+     printf("The number of solutions=%d\n",cnt);
+}

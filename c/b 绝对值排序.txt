@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int compare(const void *a, const void *b)
+{
+    return (abs(*(int *)a) - abs(*(int *)b));
+}
+
+int main()
+{
+    int n;
+    while (scanf("%d", &n) && n)
+    {
+        int *a = (int *)malloc(n * sizeof(int));
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d", &a[i]);
+        }
+        qsort(a, n, sizeof(int), compare);
+        for (int i = n - 1; i >= 0; i--)
+        {
+            printf("%d ", a[i]);
+        }
+        printf("\n");
+        free(a);
+    }
+    return 0;
+}

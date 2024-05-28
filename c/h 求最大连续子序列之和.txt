@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, cnt;
+    int max_sum, t;
+    while (1)
+    {
+        scanf("%d", &n);
+        if (n == 0)
+        {
+            break;
+        }
+        max_sum = t = 0;
+        cnt = 0;
+        int v[n];
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d", &v[i]);
+            t += v[i];
+            if (t > max_sum)
+            {
+                max_sum = t;
+            }
+            if (t < 0)
+            {
+                t = 0;
+            }
+            if (v[i] < 0)
+            {
+                cnt++;
+            }
+        }
+        printf("%d\n", max_sum);
+    }
+    return 0;
+}

@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+#define N 12
+
+int n;
+int cnt = 0;
+int col[N], dg[2*N-1], cdg[2*N-1]; 
+
+void dfs(int row) {
+    if(row == n) {
+        cnt++;
+        return;
+    }
+    
+    for(int i = 0; i < n; i++) {
+        if (!col[i] && !dg[row+i] && !cdg[n-1+row-i]) {
+            col[i] = dg[row+i] = cdg[n-1+row-i] = 1;
+            dfs(row+1);
+            col[i] = dg[row+i] = cdg[n-1+row-i] = 0;
+        }
+    }
+}
+
+int main() {
+    while (scanf("%d", &n) != EOF) {
+        cnt = 0;
+
+        for (int i = 0; i < n; i++) {
+            col[i] = 0;
+        }
+        for (int i = 0; i < 2*n - 1; i++) {
+            dg[i] = cdg[i] = 0;
+        }
+
+        dfs(0);
+        printf("%d\n", cnt);
+    }
+
+    return 0;
+}

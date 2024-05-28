@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct candidate
+{
+    int vote;
+    int index;
+};
+
+int compare(const void *a, const void *b)
+{
+    struct candidate *c1 = (struct candidate *)a;
+    struct candidate *c2 = (struct candidate *)b;
+    return (c2->vote - c1->vote);
+}
+
+int main()
+{
+    int n, k;
+    scanf("%d %d", &n, &k);
+    struct candidate *v = (struct candidate *)malloc(n * sizeof(struct candidate));
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        scanf("%d", &x);
+        v[i].vote = x;
+        v[i].index = i + 1;
+    }
+    qsort(v, n, sizeof(struct candidate), compare);
+    for (int i = 0; i < k; i++)
+    {
+        printf("%d ", v[i].index);
+    }
+    free(v);
+    return 0;
+}

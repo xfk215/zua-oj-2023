@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<string.h>
+
+int res[25], book[25];
+int k;
+
+int prime(int k){
+    if(k<=1)
+        return 0;
+    int i;
+    for(i=2;i*i<=k;i++){
+        if(k%i==0){
+            break;
+        }
+    }
+    if(i*i>k)
+        return 1;
+    return 0;
+}
+
+int check(int i,int step)
+{
+    if((book[i]==0)&&prime(i+res[step-1])==1){
+        if(step==k-1){
+            if(!prime(i+res[0]))
+                return 0;
+        }
+        return 1;
+    }
+    return 0;
+}
+
+void dfs(int step){
+    if(step==k){
+        int a;
+        for(a=0;a<k;a++){
+            printf("%d", res[a]);
+        }
+        printf("\n");
+        return ;
+    }
+    int i;
+    for(i=2;i<=k;i++){
+        if(check(i,step)){
+            book[i]=1;
+            res[step]=i;
+            dfs(step+1);
+            book[i]=0;
+        }
+    }
+}
+
+int main(void)
+{
+    scanf("%d", &k);
+    memset(res, 0, sizeof(res));
+    memset(book, 0, sizeof(book));
+    res[0] = 1;
+    dfs(1);
+    printf("\n");
+    return 0;
+}

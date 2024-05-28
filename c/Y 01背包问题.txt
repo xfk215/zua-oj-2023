@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+int main() {
+    int n, m;
+    while (scanf("%d %d", &n, &m) != EOF) {
+        int *v = (int*)malloc((n+1) * sizeof(int));
+        int *w = (int*)malloc((n+1) * sizeof(int));
+
+        for (int i = 1; i <= n; i++) {
+            scanf("%d", &v[i]);
+        }
+        for (int i = 1; i <= n; i++) {
+            scanf("%d", &w[i]);
+        }
+
+        int **f = (int**)malloc((n+1) * sizeof(int*));
+        for (int i = 0; i <= n; i++) {
+            f[i] = (int*)malloc((m+1) * sizeof(int));
+        }
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= m; j++) {
+                f[i][j] = f[i-1][j];
+                if (j >= v[i]) {
+                    f[i][j] = max(f[i-1][j], f[i-1][j-v[i]] + w[i]);
+                }
+            }
+        }
+
+        printf("%d\n", f[n][m]);
+
+        for (int i = 0; i <= n; i++) {
+            free(f[i]);
+        }
+        free(f);
+        free(v);
+        free(w);
+    }
+
+    return 0;
+}

@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    while (scanf("%d", &n) == 1)
+    {
+        int count[1000001] = {0};
+        int num;
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d", &num);
+            count[num]++;
+        }
+        for (int i = 0; i < 1000001; i++)
+        {
+            if (count[i] >= (n + 1) / 2)
+            {
+                printf("%d\n", i);
+                break;
+            }
+        }
+    }
+    return 0;
+}

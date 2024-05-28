@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+	long long n;
+	int cnt = 0;
+	
+	scanf("%lld", &n);
+	
+	while (n > 1) {
+		if (n % 2 == 0) {
+			n /= 2;
+			cnt++;
+		} else {
+			n = (3 * n + 1) / 2;
+			cnt += 2;
+		}
+	}
+	
+	printf("%d\n", cnt);
+	
+	return 0;
+}

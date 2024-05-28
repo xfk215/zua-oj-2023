@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int num[9], n;
+char opera[8];
+int cnt;
+
+void count() {
+    int sum;
+    int data[9], new_data[9];
+    char operate[8], new_operate[8];
+    int data_size = 0, new_data_size = 0;
+    sum = num[0];
+    
+    for (int i = 0; i < n - 1; ++i) {
+        if (opera[i] == ' ') {
+            if (sum == 0)
+                return;
+            sum = sum * 10 + num[i + 1];
+        } else {
+            data[data_size++] = sum;
+            operate[data_size - 1] = opera[i];
+            sum = num[i + 1];
+        }
+    }
+    data[data_size++] = sum;
+    
+    sum = data[0];
+    for (int i = 0; i < data_size - 1; ++i) {
+        if (operate[i] == '*')
+            sum *= data[i + 1];
+        else {
+            new_data[new_data_size++] = sum;
+            new_operate[new_data_size - 1] = operate[i];
+            sum = data[i + 1];
+        }
+    }
+    new_data[new_data_size++] = sum;
+    
+    sum = new_data[0];
+    for (int i = 0; i < new_data_size - 1; ++i) {
+        if (new_operate[i] == '+')
+            sum += new_data[i + 1];
+        else
+            sum -= new_data[i + 1];
+    }
+    
+    if (sum == 2000) {
+        for (int i = 0; i < data_size - 1; ++i)
+            printf("%d%c", data[i], operate[i]);
+        printf("%d=%d\n", data[data_size - 1], sum);
+        cnt++;
+    }
+}
+
+void put_operator(int x)
+{
+    if (x == n - 1) {
+        count();
+        return;
+    }
+
+    opera[x] = '*';
+    put_operator(x + 1);
+    opera[x] = '+';
+    put_operator(x + 1);
+    opera[x] = '-';
+    put_operator(x + 1);
+    opera[x] = ' ';
+    put_operator(x + 1);
+}
+
+int main() {
+    while (scanf("%d", &n) != EOF) {
+        char c;
+        for (int i = 0; i < n; ++i) {
+            scanf(" %c", &c);
+            num[i] = c - '0';
+        }
+        cnt = 0;
+        put_operator(0);
+        if (!cnt)
+            printf("IMPOSSIBLE\n");
+    }
+    return 0;
+}

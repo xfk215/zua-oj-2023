@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int ct, tt, t;
+    scanf("%d %d", &ct, &tt);
+    t = tt - ct;
+    if (t < 0)
+    {
+        t = 24 + t;
+    }
+    printf("%d\n", t);
+    return 0;
+}

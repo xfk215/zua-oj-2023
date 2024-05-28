@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, m, cnt = 0;
+    scanf("%d %d", &n, &m);
+    for (int i = n; i < m + 1; i++)
+    {
+        if (i % 6 == 0 && i % 7 != 0)
+        {
+            cnt++;
+        }
+    }
+    printf("%d\n", cnt);
+    return 0;
+}

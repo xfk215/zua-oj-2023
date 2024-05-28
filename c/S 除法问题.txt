@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+bool next_permutation(int *arr, int size) {
+    int i = size - 1;
+    while (i > 0 && arr[i - 1] >= arr[i]) {
+        i--;
+    }
+
+    if (i <= 0) {
+        return false;
+    }
+
+    int j = size - 1;
+    while (arr[j] <= arr[i - 1]) {
+        j--;
+    }
+
+    int temp = arr[i - 1];
+    arr[i - 1] = arr[j];
+    arr[j] = temp;
+
+    j = size - 1;
+    while (i < j) {
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        i++;
+        j--;
+    }
+
+    return true;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    do {
+        int num1 = a[0]*10000 + a[1]*1000 + a[2]*100 + a[3]*10 + a[4];
+        int num2 = a[5]*10000 + a[6]*1000 + a[7]*100 + a[8]*10 + a[9];
+        if (num2 != 0 && num1 % num2 == 0 && num1 / num2 == n) {
+            printf("%d / %05d = %d\n", num1, num2, n);
+        }
+    } while (next_permutation(a, 10));
+
+    return 0;
+}
